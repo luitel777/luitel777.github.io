@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yamazaki</title>
+  
+  
+  <meta name="author" content="map[name:Aagaman Luitel]">
+  <link id="pagestyle" rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" id="switcher-id" href="">
+  
+  <link rel="alternate" type="application/rss+xml" href="/thoughts/index.xml" title="Aagaman Luitel">
+</head>
+
+<body>
+  <header>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Aagaman Luitel's spaceship">
+  <meta name="author" content="Aagaman Luitel">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta charset="UTF-8">
+  <div class="site_title_index">
+    <a href="https://luitelaagaman.com.np/">Aagaman Luitel</a>
+  </div>
+  
+</header>
+
+  
+<button class="theme_changer" onclick="theme_switch()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 24 24" fill="none" color="#0fdb1a"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+  </svg>
+</button>
+
+
+<nav class="url_nav_bar" id="url_nav_bar">
+  <a rel="nofollow" href="/about">Contact</a>
+  <a rel="nofollow" href="/writings">Writings</a>
+  <a rel="nofollow" href="/thoughts">Thoughts</a>
+</nav>
+
+<script>
+  if (localStorage.getItem("darkmode") === "nosir") {
+    document.getElementById('switcher-id').href = '/css/light.css';
+  } else {
+    document.getElementById('switcher-id').href = '/css/dark.css';
+  }
+
+  function theme_switch() {
+    if (localStorage.getItem("darkmode") === "nosir") {
+      document.getElementById('switcher-id').href = '/css/dark.css';
+      localStorage.setItem("darkmode", "yessir")
+    } else {
+      document.getElementById('switcher-id').href = '/css/light.css';
+      localStorage.setItem("darkmode", "nosir")
+    }
+  }
+</script>
+
+<main>
+  
+  <div>
+    <h1>Yamazaki</h1>
+    
+  </div>
+  
+
+  
+  <article>
+	<h1><a href="https://luitelaagaman.com.np/thoughts/pcp/">Producer Consumer Problem</a></h1>
+	
+
+
+	<div class="summary">
+		Aagaman Luitel | words: 906 | 4 minutes |
+		<time datetime=" 2024-02-29">2024.02.29</time>
+	</div>
+
+
+	<div>
+		
+		I was given a presentation task on this topic and I found it super interesting. Prior to this I had never properly used multithreading in my programs so discovering this was super fun and insightful.
+Producer Consumer Problem (Bounded buffer porblem)The concept is simple. There are two working entity (functions/threads) and one buffer.
+producer -&gt; produces data consumer -&gt; consumed data buffer -&gt; Common shared buffer/data One simple example will be, suppose I have a stock analysis program, producer will generate stock values, profit and loss and so on and put theat generated value in the buffer, consumer takes that value and generates a real time graph.
+		
+		<a href="https://luitelaagaman.com.np/thoughts/pcp/">Read more...</a>
+		
+	</div>
+</article>
+  
+  <article>
+	<h1><a href="https://luitelaagaman.com.np/thoughts/workflow/">workflow changes</a></h1>
+	
+
+
+	<div class="summary">
+		Aagaman Luitel | words: 430 | 2 minutes |
+		<time datetime=" 2024-01-23">2024.01.23</time>
+	</div>
+
+
+	<div>
+		
+		I rarely change my workspace but I am at the point where I feel comfortable with my workspace (again).
+TmuxI was really hesitant to use tmux since all I believed tmux was for only splitting terminals but oh boy I was wrong. Yes it splits terminal and creates new window but its more than that: its how you can sit in one terminal and control all others terminals. I no longer have to golf through terminals to find the one I am searching for.
+		
+		<a href="https://luitelaagaman.com.np/thoughts/workflow/">Read more...</a>
+		
+	</div>
+</article>
+  
+  <article>
+	<h1><a href="https://luitelaagaman.com.np/thoughts/kafka/">Franz Kafka</a></h1>
+	
+
+
+	<div class="summary">
+		Aagaman Luitel | words: 298 | 1 minutes |
+		<time datetime=" 2023-12-19">2023.12.19</time>
+	</div>
+
+
+	<div>
+		
+		franz_kafkaI read all of these in 1-2 months without giving it enough thought process, so I might be wrong or biased.
+Till now I&rsquo;ve read his three writings
+&ldquo;The Trial&rdquo; &ldquo;Metamorphosis&rdquo; &ldquo;Kafka&rsquo;s letter to his father&rdquo; Truth to be told, I am not fan of his works, but I like the essence behind it. Being raised by his domineering father he became very timid and insecure. This led to his absurd thoughts of existentialism.
+		
+		<a href="https://luitelaagaman.com.np/thoughts/kafka/">Read more...</a>
+		
+	</div>
+</article>
+  
+  <article>
+	<h1><a href="https://luitelaagaman.com.np/thoughts/qemu/">qemu</a></h1>
+	
+
+
+	<div class="summary">
+		Aagaman Luitel | words: 93 | 0 minutes |
+		<time datetime=" 2023-12-15">2023.12.15</time>
+	</div>
+
+
+	<div>
+		
+		Frequent qemu things I have been frequently using.
+create qemu image
+1 qemu-img create disk.img -f qcow2 20G run iso in the image
+1 2 qemu-system-x86_64 -cdrom linux.iso -hda disk.img \ -m 4096 --display sdl,gl=on -vga virtio -enable-kvm -cpu host note: cpu host uses your actual cpu instead of emulating one hence this increases performance darastically
+Run riscv compiled binary
+1 qemu-riscv64 program Debug an iso. Default target localhost:1234
+1 qemu-system-x86_64 -S -s image.
+		
+		<a href="https://luitelaagaman.com.np/thoughts/qemu/">Read more...</a>
+		
+	</div>
+</article>
+  
+  <article>
+	<h1><a href="https://luitelaagaman.com.np/thoughts/burn/">Burn of social media</a></h1>
+	
+
+
+	<div class="summary">
+		Aagaman Luitel | words: 251 | 1 minutes |
+		<time datetime=" 2023-07-02">2023.07.02</time>
+	</div>
+
+
+	<div>
+		
+		I always hoped for social media to burn and corrupt themself. This is happening right now!
+Reddit introduced their new API changes to kill every unofficial reddit app. Considering how their offical andriod/web app is a bloated mess as in both UI and their speed I don&rsquo;t think reddit would last that long. If not it will be less popular. Reddit threads are so horrendus that threads are not fully shown, clicking the thread loads the whole thread.
+		
+		<a href="https://luitelaagaman.com.np/thoughts/burn/">Read more...</a>
+		
+	</div>
+</article>
+  
+  <article>
+	<h1><a href="https://luitelaagaman.com.np/thoughts/things_yamazaki_says/">things yamazaki wants</a></h1>
+	
+
+
+	<div class="summary">
+		Aagaman Luitel | words: 76 | 0 minutes |
+		<time datetime=" 2023-06-14">2023.06.14</time>
+	</div>
+
+
+	<div>
+		
+		wants everyone to use text based messaging platform for day to day use. Like gamja. hopes for email based workflow on git instead of github wishes to find an intern in his fav field (there are none) wants a collapse of social media and see it brun wants Hoshino Ai to revive (not possible) All this weirdness aside, I think not opening any messaging platforms/social media and doing your own shit daily will massively improve you.
+		
+		<a href="https://luitelaagaman.com.np/thoughts/things_yamazaki_says/">Read more...</a>
+		
+	</div>
+</article>
+  
+  <article>
+	<h1><a href="https://luitelaagaman.com.np/thoughts/helix/">Helix editor</a></h1>
+	
+
+
+	<div class="summary">
+		Aagaman Luitel | words: 943 | 4 minutes |
+		<time datetime=" 2023-06-10">2023.06.10</time>
+	</div>
+
+
+	<div>
+		
+		Terminals clients are not my jam. I want to show some love to emacs but emacs is not snappy. VScode feels slow&hellip; resizing and re-rendering electron app is buggy in wayland session. Jetbrains product are too heavy and I have constant worry about my educational licenses.
+HelixThese are the limitations that let me stick to neovim. Don&rsquo;t get me wrong neovim is a fantastic editor. A guy like me who is heavily opinionated about terminal editors uses it due to its sheer performace and flexibility.
+		
+		<a href="https://luitelaagaman.com.np/thoughts/helix/">Read more...</a>
+		
+	</div>
+</article>
+  
+  <article>
+	<h1><a href="https://luitelaagaman.com.np/thoughts/changes/">changes</a></h1>
+	
+
+
+	<div class="summary">
+		Aagaman Luitel | words: 127 | 0 minutes |
+		<time datetime=" 2023-05-30">2023.05.30</time>
+	</div>
+
+
+	<div>
+		
+		I did some digging and I found that I can change how feeds works in zola. You basically disable feeds globally and manually enable it on the subfolders of the content you want. The drawback is I cannot create atom feeds so I have to use RSS which is limited but hey at least it works now!
+I also introduced new fonts called Modern Computer. This font is used in default latex papers and I kinda like the look of this font.
+		
+		<a href="https://luitelaagaman.com.np/thoughts/changes/">Read more...</a>
+		
+	</div>
+</article>
+  
+  <br>
+<div>
+	
+	1 of 2
+	
+	<a href="/thoughts/page/2/">Next Page</a>
+	
+</div>
+</main>
+<aside>
+	<div class="thoughts">
+		<div>
+			<h3>LATEST THOUGHTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/thoughts/pcp/">Producer Consumer Problem</a></li>
+				
+				<li><a href="/thoughts/workflow/">workflow changes</a></li>
+				
+				<li><a href="/thoughts/kafka/">Franz Kafka</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+  <footer>
+	<p>&copy; 2024 <a href="https://luitelaagaman.com.np/">Aagaman Luitel</a></p>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+/* @font-face { */
+  /* font-family: 'Iosevka'; */
+  /* font-display: swap; */
+  /* font-weight: 400; */
+  /* font-stretch: normal; */
+  /* font-style: normal; */
+  /* src: url('/fonts/WOFF2/Iosevka-Regular.woff2') format('woff2') */
+/* } */
+
+
+@font-face {
+  font-family: "CMU Classical Serif";
+  src: url("/fonts/CMU/cmunci.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CMU Concrete";
+  src: url("/fonts/CMU/cmunobi.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "CMU Sans Serif";
+  src: url("/fonts/CMU/cmunss.ttf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "MonaspaceNeon";
+  src: url("/MonaspaceNeon-Regular.woff");
+  font-weight: bold;
+}
+
+/*
+:root {
+  --url: #4882E0;
+  --background-color: #1C2127;
+  --text: #dcdcdc;
+  --subtext: #c1c0d4;
+  --title_1: #5077D3;
+  --title_0: #c1c0d4;
+  --button: #5077D3;
+}
+*/
+
+/* main root theme
+:root {
+  --url: #4882E0;
+  --background-color: #000000;
+  --text: #dcdcdc;
+  --subtext: #c1c0d4;
+  --title_1: #5077D3;
+  --title_0: #c1c0d4;
+  --button: #5077D3;
+}
+
+*/
+
+table {
+  border: 1px solid var(--text);
+}
+
+table th,
+td {
+  border: 1px solid var(--text);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+article a {
+  color: var(--title_1);
+}
+
+/* this is title links of homepage */
+.index h1 a {
+  font-size: 1.2em;
+  color: var(--title_1);
+  /* how https://codepen.io/t_afif/pen/XWNQZJa */
+  background: linear-gradient(currentColor 0 0) var(--p, -101%) 100% /50% 3px no-repeat,
+    linear-gradient(90deg, currentColor 50%, transparent 0) bottom /var(--d, 0) 3px no-repeat;
+  transition: 0.3s,
+    background-size 0.3s 0.3s;
+}
+
+.index h1 {
+  color: var(--title_1);
+  margin: 30px 0 5px;
+}
+
+h1 {
+  color: var(--title_1);
+  margin: 30px 0 5px;
+
+}
+
+
+.index h1 a:hover {
+  --d: 100%;
+  --p: 100%;
+  transition: 0.3s, background-position 0.2s 0.3s;
+}
+
+.summary {
+  color: var(--subtext);
+  margin: 0px 0 10px;
+}
+
+html {
+  /* font-family: "Iosevka"; */
+  font-family: "CMU Sans Serif";
+  color: var(--text);
+  background-color: var(--background-color);
+}
+
+blockquote {
+  color: rgb(57, 177, 67);
+  /* Todo: make this fancy */
+  /* outline: 1px solid red; */
+}
+
+h1,
+h2,
+title,
+.site_title_index,
+.url_nav_bar {
+  font-family: "CMU Classical Serif";
+  font-weight: 300;
+}
+
+
+strong,
+code {
+  font-size: 0.9em;
+  font-family: "MonaspaceNeon";
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+.thoughts,
+header,
+main,
+footer {
+  /* font-size: 1.2em; */
+  text-align: justify;
+  margin-right: 10%;
+  max-width: 80%;
+  margin-left: 10%;
+}
+
+img {
+  max-width: 100%;
+  max-height: 400px;
+}
+
+.modeToggle {
+  border: none;
+  background: none;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+  outline: none;
+}
+
+.modeToggle :hover {
+  opacity: 0.3;
+}
+
+
+a {
+  color: var(--url);
+  text-decoration: none;
+}
+
+.site_title_index :link,
+.site_title_index :hover,
+.site_title_index :active,
+.site_title_index :visited {
+  color: var(--title_0);
+  font-size: 2em;
+  text-decoration: none;
+}
+
+
+.url_nav_bar {
+  font-size: 1.3em;
+  padding-right: 1%;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+@media only screen and (max-width: 1200px) {
+
+  .site_title_index {
+    text-align: center;
+  }
+
+  .url_nav_bar {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+    align-items: flex-start;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modeToggle {
+    display: inline;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+/* https://frontendmasters.com/blog/highlight-text-when-a-user-scrolls-down-to-that-piece-of-text/ */
+mark.scroll-highlight {
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-image: linear-gradient(#e64553, #e64553);
+  color: var(--background-color);
+  animation: mark-it linear;
+  animation-fill-mode: forwards;
+  animation-timeline: view();
+  animation-iteration-count: 1;
+  animation-range: contain 0% contain 15%;
+}
+
+@keyframes mark-it {
+  0% {
+    background-size: 0 100%;
+  }
+
+  100% {
+    background-size: 100% 100%;
+  }
+}
+
+.box {
+  border: 2px solid #7F0FFF;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  inline-size: fit-content;
+  overflow-wrap: break-word;
+}
+
+.theme_changer {
+  background-color: var(--background-color);
+  position: absolute;
+  top: 20px;
+  right: 10px;
+
+}
+
+article a {
+  color: var(--link);
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forced frames</title>
+  
+  
+  <meta name="author" content="map[name:Aagaman Luitel]">
+  <link id="pagestyle" rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" id="switcher-id" href="">
+  
+</head>
+
+<body>
+  <header>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Aagaman Luitel's spaceship">
+  <meta name="author" content="Aagaman Luitel">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <meta charset="UTF-8">
+  <div class="site_title_index">
+    <a href="https://luitelaagaman.com.np/">Aagaman Luitel</a>
+  </div>
+  
+</header>
+
+  
+<link rel="stylesheet" href="/css/single.css">
+
+
+<button class="theme_changer" onclick="theme_switch()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="24" viewBox="0 0 24 24" fill="none" color="#0fdb1a"
+    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-zap">
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+  </svg>
+</button>
+
+
+<nav class="url_nav_bar" id="url_nav_bar">
+  <a rel="nofollow" href="/about">Contact</a>
+  <a rel="nofollow" href="/writings">Writings</a>
+  <a rel="nofollow" href="/thoughts">Thoughts</a>
+</nav>
+
+<script>
+  if (localStorage.getItem("darkmode") === "nosir") {
+    document.getElementById('switcher-id').href = '/css/light.css';
+  } else {
+    document.getElementById('switcher-id').href = '/css/dark.css';
+  }
+
+  function theme_switch() {
+    if (localStorage.getItem("darkmode") === "nosir") {
+      document.getElementById('switcher-id').href = '/css/dark.css';
+      localStorage.setItem("darkmode", "yessir")
+    } else {
+      document.getElementById('switcher-id').href = '/css/light.css';
+      localStorage.setItem("darkmode", "nosir")
+    }
+  }
+</script>
+
+<main>
+  <article>
+
+    <div class="single_main">
+      <div class="single_heading">
+        <h1>Forced frames</h1>
+        Aagaman Luitel | words: 76 | 0 minutes |
+        <time datetime=" 2022-03-02">2022.03.02</time>
+        <hr>
+      </div>
+      <div>
+        <p>Horror of forcing animation to 60fps</p>
+<p><img src="./4k.png" alt="">
+<img src="./original.png" alt=""></p>
+<p>1st scene is 60fps created mix not available on original 24</p>
+<p>creating by mixing before and after frames of 24fps and putting it in middle (I guess)</p>
+<p>certainly smooth but not ideal for proper viewing, you need to force your brain to ignore shitty frames like this created by forced 60fps. Human eyes and brain are werid</p>
+<p>Just something to say because I don&rsquo;t want to study for exams tomorrow</p>
+
+      </div>
+    </div>
+
+
+    
+    </div>
+
+    
+
+  </article>
+</main>
+<aside>
+	<div class="thoughts">
+		<div>
+			<h3>LATEST THOUGHTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/thoughts/pcp/">Producer Consumer Problem</a></li>
+				
+				<li><a href="/thoughts/workflow/">workflow changes</a></li>
+				
+				<li><a href="/thoughts/kafka/">Franz Kafka</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+  <footer>
+	<p>&copy; 2024 <a href="https://luitelaagaman.com.np/">Aagaman Luitel</a></p>
+</footer>
+
+</body>
+
+</html>
